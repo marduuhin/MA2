@@ -50,6 +50,22 @@ Lähtudes eksperimendi tulemustest järeldati, et kõrge tundlikkusega vastuvõt
 
 
 Ptk 2.2 - mõõdistamine kaabli ja attenuaatoritega
+Eesmärk: mõõta maksimaalset atenuatsiooni saatja ja vastuvõtja vahel, mille käigus veel side toimib.
+
+Üldpilt
+Eksperiment on üles ehitatud kolme peamise komponendiga: 1. Saatja, 2. Vastuvõtja, 3. Kaabelside kahe saatja vahel. Kaabelsidele lisatakse attenuaatoreid kuni side katkeb. Attenuaatorite lisamine imiteerib kauguse suurenemist raadioside puhul. Pärast maksimaalse attenuatsiooni mõõtmist saab vastuvõtja tundlikkuse välja arvutada liites kogu lingi attenuatsioonile saatja väljundvõimsuse.
+
+Saatja ja vastuvõtja
+Saatja ja vastuvõtja on seadistatud sarnaselt eelnevas katses kirjeldatuga. Tehtud on 2 muudatust: 1. Firmware tasemel muudetud korduste arv kolme pealt sajani, et oleks mugavam katset läbi viia. 2. Patareid asendatud 20Ah akupangaga, et ennetada patareide pingelangusest tulenevat väljundvõimsuse vähenemist. Eelnevate mõõtmiste käigus selgus, et patareipanga väljundpinge vähenes 3.3v pealt 2.9 peale pärast 8-tunnist testimispäeva. Akupangaga vähenes pinge samaväärse päeva käigus 3.3v pealt 3.298v peale.
+
+Sidelink
+Sidelink koosneb attenuaatoritest ja 5-meetri pikkusest kaablist. Kaabli ja ülemineku attenuaatsioon sai eraldi üle mõõdetud, selle väärtus oli -1dB. Attenuaatoreid oli kasutada väärtusega -3.6; -10 ja -20dB. Erinevate attenuaatorite kombineerimisega oli maksimaalne võimalik attenuaatsioon -180dB. Kaabel sai lisatud saatja ja vastuvõtja vahele lisatud, et vähendada seadme tööst tuleneva raadioeetri müra mõju.
+
+Tulemused/probleem
+Eksperimendi käigus lisati attenuaatoreid ja logiti mitu paketti 100st vastuvõtjani jõuab. Probleem ilmnes hetkel, mil kõik attenuaatorid olid rakendatud, kuid side jätkuvalt toimis. Seejärel ühendati saatja ja vastuvõtja vaheline kaabel lahti ning side toimis jätkuvalt. Katsetati ka erinevaid kaableid, üleminekuid, attenuaatorite ja seadmete paigutust ruumis, kuid ükski ei andnud tulemust. Järelikult levis signaal ühe seadme trükiplaadilt otse teisele läbi õhu.
+Lähtudes eksperimendi tulemustest järeldati, et kõrge tundlikkusega vastuvõtjate mõõdistamiseks KVAs on vaja kasutada täiendavat varjestust.
+
+
 /*Ühendatud kaabliga, attenuaatorite lisamine. Plaan mõõta spektrianalüsaatoriga hiljem vähendades attenuaatoreid*/
 /*Probleem: Vastuvõtja sai signaali kätte ka siis, kui polnud ühendatud. Uus plaan varjestus*/
 Ptk 2.3 - mõõdistamine kaabli ja attenuaatoritega + seadme varjestamine
