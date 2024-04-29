@@ -50,6 +50,8 @@ Lähtudes eksperimendi tulemustest järeldati, et kõrge tundlikkusega vastuvõt
 
 
 Ptk 2.2 - mõõdistamine kaabli ja attenuaatoritega
+2.2.1 - /*Miks sai valitud see meetod?*/
+2.2.2 - Eksperimendi kirjeldus
 Eesmärk: mõõta maksimaalset atenuatsiooni saatja ja vastuvõtja vahel, mille käigus veel side toimib.
 
 Üldpilt
@@ -66,12 +68,16 @@ Eksperimendi käigus lisati attenuaatoreid ja logiti mitu paketti 100st vastuvõ
 Lähtudes eksperimendi tulemustest järeldati, et kõrge tundlikkusega vastuvõtjate mõõdistamiseks KVAs on vaja kasutada täiendavat varjestust.
 
 
-/*Ühendatud kaabliga, attenuaatorite lisamine. Plaan mõõta spektrianalüsaatoriga hiljem vähendades attenuaatoreid*/
-/*Probleem: Vastuvõtja sai signaali kätte ka siis, kui polnud ühendatud. Uus plaan varjestus*/
 Ptk 2.3 - mõõdistamine kaabli ja attenuaatoritega + seadme varjestamine
+2.3.1 - /*Miks sai valitud see meetod?*/
+2.3.2 - Eksperimendi kirjeldus
 /*Probleem ei lahenenud. Uus plaan Faraday.*/
+
+
 Ptk 2.4 - mõõdistamine Faraday ruumis (B007)
-/*...*/
+2.4.1 - /*Miks sai valitud see meetod?*/
+2.4.2 - Eksperimendi kirjeldus
+
 
 
 Ptk 3 - Eksperimentide tulemuste kokkuvõte, analüüs, järeldused...
