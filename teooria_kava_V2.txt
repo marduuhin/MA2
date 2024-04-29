@@ -13,13 +13,33 @@ Rohde&Schwarz PR200
 Rohde&Schwarz ???
 Ptk 1.3: LoRa lühikirjeldus (fookus tundlikkus, muu on vaht - pole relevantne). Järgmiste peatükkide oodatav tulemus tuleneb ka siit.
 
+
 Ptk 2 - Eksperimendid. Iga alapeatükk koosneb kolmest osast: 1. mõne eelneva uurimustöö metoodika kirjeldus (viide) 2. metoodika reprodutseerimise plaani kirjeldus, 3. tulemused/probleemid/mõtted, ...
 Ptk 2.1 - mõõdistamine otsenähtavusega
 2.1.2 - eksperimendi kirjeldus:
 Eesmärk: mõõta maksimaalsel võimalikult sidekaugusel vastuvõtjani jõudva signaali tugevust.
-Eksperiment on üles ehitatud kolme peamise komponendiga: 1. Saatja, 2. Vastuvõtja, 3. Mõõteaparaat. Vastuvõtja ja mõõteseadme antennid paiknevad kohakuti 5cm vahega, et nendeni jõudev signaal oleks identne. Idee on leida maastikupunkt, kus side saatja ja vastuvõtja vahel katkeb ning fikseerida mõõteseadme abil vastuvõtjani jõudva signaali tugevus.
+Eksperiment on üles ehitatud kolme peamise komponendiga: 1. Saatja, 2. Vastuvõtja, 3. Mõõteaparaat. Vastuvõtja ja mõõteseadme antennid paiknevad kohakuti 5cm vahega, et nendeni jõudev signaal oleks identne. Idee on leida maastikupunkt, kus side saatja ja vastuvõtja vahel katkeb ning fikseerida mõõteseadme abil vastuvõtjani jõudva signaali tugevus. Kõigil kolmel on kasutuses identne antenn.
 
-Saatja 
+Saatjana oli kasutuses Heltec poolt toodetud LoRa Turtle (V1.2) [/*Viide - L1; Viide - L2*/] koos RadioShuttle tarkvaraga [/*Viide - L3*/]. Signaali edastamiseks kasutatati "Ping" programmi, kusjuures vastuvõtja ID oli seadistatud "valeks", et vastuvõtja oleks ainult kuulaja rollis ja ei saadaks pingile vastust. Programm "Ping" valiti oma minimaalse andmeside paketi tõttu. RadioShuttle firmware kordas pingi edastamist 3x, kui vastust saatjalt ei saabunud. Saatja oli akutoitel.
+Saatja LoRa seaded:
+LORA_DEVICE_ID:	10	12809
+LORA_REMOTE_ID:	12	12800
+LORA_RADIO_TYPE:	14	3
+LORA_FREQUENCY:	15	433000000	868100000
+LORA_BANDWIDTH:	16	125000
+LORA_SPREADING_FACTOR:	17	7
+LORA_TXPOWER:	18	14
+LORA_FREQUENCY_OFFSET:	19	0
+
+Vastuvõtjana oli kasutuses identne LoRa Turtle, seadistuses muudetud LORA_REMOTE_ID välja väärtust 12=12805. Vastuvõtja 
+
+Mõõteaparaat
+
+Muutujad eksperimendi käigus
+
+Tulemused
+
+Probleemid
 
 Vastuvõtva signaali tugevuse mõõtmiseks kasutatakse spektrianalüsaatorit Rhode&Schwarz /*mudel*/. Spektrianalüsaatori RF sisendisse on otse ühendatud omni-directional antenn. Selle kõrval on 5-10cm vahega LoRa vastuvõtja, mis on ühendatud arvutiga. LoRa vastuvõtja antenn on samas suunas ning samal kaugusel muudest takistustest nagu spektrianalüsaatori antenn. Antennide 5-10cm vahe on tingitud spektrianalüsaatori korpusest. LoRa vastuvõtja logib iga vastuvõetud paketi arvutisse läbi USB serial ühenduse. /*Saatja, pingi kirjeldus*/ /*Spektrianalüsaatori seadete kirjeldus*/
 /*Probleem: Vastuvõtja sai signaali kätte, aga spektrianalüsaatoril polnud enam võimalik eristada signaali mürast.*/
@@ -36,5 +56,10 @@ Ptk 3 - Eksperimentide tulemuste kokkuvõte, analüüs, järeldused...
 
 
 Viited:
+L1 - https://resource.heltec.cn/download/TurtleBoard/Turtle%20Board.pdf
+L2 - https://www.radioshuttle.de/wp-content/uploads/2020/07/Turtle-Data_sheet.pdf 
+L3 - https://github.com/RadioShuttle/MBED_Turtle_Radioshuttle
+
+
 Pinge-väljundvõimsuse seos: 10.1088/1742-6596/1407/1/012092
 
